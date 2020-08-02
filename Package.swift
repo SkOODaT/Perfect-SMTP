@@ -1,4 +1,5 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.2
+
 import PackageDescription
 let package = Package(name: "PerfectSMTP",
 	platforms: [
@@ -6,9 +7,9 @@ let package = Package(name: "PerfectSMTP",
 	],
 	products: [.library(name: "PerfectSMTP",targets: ["PerfectSMTP"]),],
     dependencies: [
-		.package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", from: "5.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-Crypto.git", from: "4.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-MIME.git", from: "1.0.0"),
+        .package(name: "PerfectCURL", url: "https://github.com/123FLO321/Perfect-CURL.git", .branch("swift5")),
+        .package(name: "PerfectCrypto", url: "https://github.com/123FLO321/Perfect-Crypto.git", .branch("swift5")),
+        .package(name: "PerfectMIME", url: "https://github.com/123FLO321/Perfect-MIME.git", .branch("swift5")),
 	],
     targets: [
         .target(

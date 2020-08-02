@@ -135,7 +135,7 @@ extension String {
 	/// get the address info from a recipient, i.e, someone@somewhere -> @somewhere
 	var emailSuffix: String {
 		get {
-			guard let at = index(of: "@") else {
+            guard let at = firstIndex(of: "@") else {
 				return self
 			}
 			#if swift(>=4.0)
